@@ -15,7 +15,9 @@
 
 		<div class="scm-search">
 			<button class="label-l mui-icon mui-icon-search" id="search-btn"></button>
-			<a href="#search_box" class="label-r">筛选<i class="mui-icon mui-icon-arrowdown"></i></a>
+			<a href="#search_box" class="label-r">筛选
+				<i class="mui-icon mui-icon-arrowdown"></i>
+			</a>
 		    <input type="search" class="" placeholder="搜索" name="keyWord" id="search">  
 		</div> 
 		<div class="scm-list">
@@ -52,7 +54,9 @@
 	<div id="search_box" class="mui-popover scm-popover">
 		<ul class="mui-table-view">
 			<#list search_item as i>
-		   		<li class="mui-table-view-cell"><a href="javascript:void(0)" class="search-item" data-value="${i.value}">${i.text}</a></li>
+		   		<li class="mui-table-view-cell">
+		   			<a href="javascript:void(0)" class="search-item" data-value="${i.value}">${i.text}</a>
+		   		</li>
 		   	</#list>
 		</ul>
 	</div>
@@ -84,11 +88,11 @@
 						<h3 class="title">选择销售等级</h3>
 						<ul class="mui-table-view-radio level">
 							<#list levelList as item>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">${item}级
-									<input type="radio" name="level" value="${item}"/>
-								</a>
-							</li>
+								<li class="mui-table-view-cell">
+									<a class="mui-navigate-right">${item}级
+										<input type="radio" name="level" value="${item}"/>
+									</a>
+								</li>
 							</#list>
 						</ul>
 					</li>

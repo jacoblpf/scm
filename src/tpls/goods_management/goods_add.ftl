@@ -15,22 +15,22 @@
 		
 	</nav>
 	<@scroll >
-	<div class="pd-box add  mui-control-content mui-active" id="entry">
-			
-		<p>请输入商品sku编码，商品名称，商品属性（不同sku用';'隔开，商品属性用'、'隔开）</p>
-		<textarea placeholder="例如：SJD133,iphone5,金色、64G;SJD893,iphone5s,金色、64G;" id="goods-info"></textarea>
-		<div class="scm-btn-group">
-		<a href="#preview" class="mui-btn mui-btn-block darkgreen mui-control-item" id="goprev">提交</a>
-	</div>
-	</div>
-	
-	<div class=" mui-control-content" id="preview">
-		<form action="${add_path}" method="post" id="addForm">
-		<ul class="enter-list">
-			
-		</ul>
-		</form>
-	</div>
+		<div class="pd-box add  mui-control-content mui-active" id="entry">
+				
+			<p>请输入商品sku编码，商品名称，商品属性（不同sku用';'隔开，商品属性用'、'隔开）</p>
+			<textarea placeholder="例如：SJD133,iphone5,金色、64G;SJD893,iphone5s,金色、64G;" id="goods-info"></textarea>
+			<div class="scm-btn-group">
+				<a href="#preview" class="mui-btn mui-btn-block darkgreen mui-control-item" id="goprev">提交</a>
+			</div>
+		</div>
+		
+		<div class=" mui-control-content" id="preview">
+			<form action="${add_path}" method="post" id="addForm">
+				<ul class="enter-list">
+					
+				</ul>
+			</form>
+		</div>
 	</@scroll>
 </@body>
 
