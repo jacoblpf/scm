@@ -1,0 +1,18 @@
+{
+
+	"is_weixin":false,
+
+	"title":"商品批量录入",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"商品批量录入" 
+
+	},
+
+	"add_path":"./goods_publish.html"
+}

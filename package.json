@@ -1,0 +1,20 @@
+{
+  "name": "scm_1",
+  "version": "1.0.0",
+  "description": "scm front file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liaopengfei",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "freemarker.js": "^1.2.2",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "gulp-watch-path": "^0.1.0",
+    "handlebars": "^4.0.5",
+    "path": "^0.12.7"
+  }
+}

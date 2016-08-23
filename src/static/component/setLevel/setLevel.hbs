@@ -1,0 +1,55 @@
+<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+	<div class="scm-list" >
+		{{#if level}}
+		{{#else}}
+			<div class="no-level">
+				<span>您还未设置销售等级</span>
+				<a class="btn newLink pull-r" href="./set_sale_level.html">去设置</a>
+			</div>
+		{{/if}}
+		<form action="setLevel_path" mothed="post">
+		<ul>
+			<li class="list-item">
+				<h3 class="title">分销商名称</h3>
+				<span class="name">{{name}}</span>
+			</li>
+			<li class="list-item">
+				<h3 class="title">手机号码</h3>
+				<span class="name">{{phone}}</span>
+			</li>
+			{{#if level}}
+				<li class="list-item">
+					<h3 class="title">选择销售等级</h3>
+					<ul class="mui-table-view-radio level">
+						{{#each level}}
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">{{this}}级
+								<input type="radio" name="level" value="{{this}}"/>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</li>
+			{{/if}}
+			<li class="list-item">
+				<h3 class="title">选择付款方式</h3>
+				<ul class="mui-table-view-radio pay">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">即时付款
+							<input type="radio" name="payWay" value="1"/>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">非即时付款
+							<input type="radio" name="payWay" value="2"/>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="list-item end">
+				<button type="submit" class="scm-btn-lg green close-popover">确定</button>
+			</li>
+		</ul>
+		</from>
+	</div>
+</div>	

@@ -1,0 +1,10 @@
+{{#each list}}
+<li class="list-item">
+	<a class="goods clear newLink" href="{{link}}">
+		<img src="{{img}}">
+		<h2 class="title">{{goodsName}}</h2>
+		<p class="price">￥{{startPrice}}{{#if endPrice}} - ￥{{endPrice}}{{/if}}</p>
+		<p class="status clear"><span>{{spec}}种规格</span> <span>{{#if status}}已上架{{else}}未上架{{/if}}</span></p>
+	</a>
+</li>
+{{/each}}

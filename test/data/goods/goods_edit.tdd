@@ -1,0 +1,16 @@
+{
+	
+	"is_weixin":false,
+
+	"title":"编辑商品",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"编辑商品" 
+
+	}
+}

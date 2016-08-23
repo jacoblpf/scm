@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+	<html lang="ZH">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我的商品</title>
+		<link rel="stylesheet" type="text/css" href="./static/lib/mui/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/style/default/css/base.css">
+	</head>
+
+	<body>
+
+	<header class="mui-bar mui-bar-nav scm-nav-black">
+		<a href="./index.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left newLink"><span>返回</span></a>
+		<h1 class="mui-title">贝婴美</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab scm-bar-green">
+		<a class="mui-tab-item mui-active newLink" href="./goods_add.html">
+			<span class="mui-tab-label">+ 新增商品</span>
+		</a>
+	</nav>
+	<div class="mui-content mui-scroll-wrapper " id="main">
+		<div class="mui-scroll">
+		<div class="scm-search">
+			<button class="label-l mui-icon mui-icon-search" type="button" id="search-btn"></button>
+			<a href="#search_box" class="label-r">筛选<i class="mui-icon mui-icon-arrowdown"></i></a>
+		    <input type="search" class="" placeholder="搜索" name="keyWord" id="search">  
+		</div> 
+		
+		<div class="scm-list  no-margin" id="list_content">
+			<ul class="" id="goods-list">
+					<li class="list-item">
+						<a class="goods clear newLink" href="./goods_detail.html">
+							<img src="./static/style/default/img/3.png">
+							<h2 class="title">贝婴美婴幼儿奶粉</h2>
+							<p class="price">￥100
+								- ￥300
+							</p>
+							<p class="status clear"><span>3种规格</span> <span>已上架</span></p>
+						</a>
+					</li>
+					<li class="list-item">
+						<a class="goods clear newLink" href="1.html">
+							<img src="1.png">
+							<h2 class="title">贝婴美健儿奶粉</h2>
+							<p class="price">￥300
+								- ￥700
+							</p>
+							<p class="status clear"><span>2种规格</span> <span>未上架</span></p>
+						</a>
+					</li>
+					<li class="list-item">
+						<a class="goods clear newLink" href="1.html">
+							<img src="1.png">
+							<h2 class="title">贝婴美成长奶粉</h2>
+							<p class="price">￥300
+								- ￥500
+							</p>
+							<p class="status clear"><span>4种规格</span> <span>已上架</span></p>
+						</a>
+					</li>
+					<li class="list-item">
+						<a class="goods clear newLink" href="1.html">
+							<img src="1.png">
+							<h2 class="title">贝婴美纸尿裤</h2>
+							<p class="price">￥40
+								- ￥80
+							</p>
+							<p class="status clear"><span>3种规格</span> <span>已上架</span></p>
+						</a>
+					</li>
+					<li class="list-item">
+						<a class="goods clear newLink" href="1.html">
+							<img src="1.png">
+							<h2 class="title">贝婴美奶粉</h2>
+							<p class="price">￥100
+								- ￥300
+							</p>
+							<p class="status clear"><span>3种规格</span> <span>已上架</span></p>
+						</a>
+					</li>
+					<li class="list-item">
+						<a class="goods clear newLink" href="1.html">
+							<img src="1.png">
+							<h2 class="title">贝婴美奶粉</h2>
+							<p class="price">￥100
+								- ￥300
+							</p>
+							<p class="status clear"><span>3种规格</span> <span>已上架</span></p>
+						</a>
+					</li>
+			</ul>
+		</div>
+		
+		</div>
+	</div>
+	<div id="search_box" class="mui-popover scm-popover">
+		<ul class="mui-table-view">
+		   		<li class="mui-table-view-cell"><a href="javascript:void(0)" class="search-item" data-value="price">价格</a></li>
+		   		<li class="mui-table-view-cell"><a href="javascript:void(0)" class="search-item" data-value="saleNum">销量</a></li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="./static/lib/mui/js/mui.min.js"></script>
+	<script type="text/javascript" src="./static/js/base.js"></script>
+	
+	</body>
+
+	</html>
+<script src="./static/lib/handlebars/handlebars.runtime.js"></script>
+<script src="./static/lib/jquery/jquery.min.js"></script>
+<script src="./static/scm/goods-management/goods-list/goods-list.js"></script>
+
+<script>
+	(function(){
+			var current = 2;
+			var template = Handlebars.templates['goods-list.hbs'];
+			var keyWord = 'all';
+
+			mui.init({
+			  pullRefresh : {
+			    container:'.mui-content',
+			    up : {
+			      height:20,
+			      contentrefresh : "正在加载...",
+			      contentnomore:'没有更多数据了',
+			      callback :function(){loadMore.call(this, this)}
+			    }
+			  }
+			});
+
+			function loadMore(o){
+	   			jQuery.ajax({
+	   				url:'/server/loadGoodsList',
+	   				type:'post',
+	   				data:{page:current,keyWord:keyWord},
+	   				success:function(data){
+	   					var html = template(data);
+	   					
+	   					jQuery("#goods-list").append(html);
+	   								   			
+			   			if(data.length !== 0){
+			   				o.endPullupToRefresh(false);
+			   				current++;
+			   			}else {
+			   				o.endPullupToRefresh(true);
+			   			}
+			  			
+	   				}
+	   			})
+	   			
+
+			};
+
+			function search(){
+
+				jQuery.ajax({
+	   				url:'/server/loadGoodsList',
+	   				type:'post',
+	   				data:{"keyWord":keyWord,"page":current},
+	   				success:function(data){
+	   					var html = template(data);
+			   			jQuery("#goods-list").html(html);
+			   			current++;
+			   			mui('#search_box').popover('hide');
+	   				}
+	   			})
+
+			}
+
+			jQuery('.search-item').click(function(){
+			
+				current = 1;
+				keyWord = this.getAttribute('data-value');
+				search();
+			});
+
+			jQuery('#search-btn').click(function(){
+				current = 1;
+				keyWord = jQuery('#search').val();
+				search();
+			});
+
+			
+
+		})();
+
+</script>

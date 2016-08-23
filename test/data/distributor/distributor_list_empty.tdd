@@ -1,0 +1,16 @@
+{
+	"is_weixin":false,
+
+	"title":"我的分销商",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"我的分销商" 
+	},
+	"invite_link":"./invite.html"
+	
+}

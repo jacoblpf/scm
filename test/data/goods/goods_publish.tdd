@@ -1,0 +1,21 @@
+{
+
+	"is_weixin":false,
+
+	"title":"商品发布",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"商品发布" 
+
+	},
+	"publish_top_img":"./static/style/default/img/publish.png",
+	"goods_num":"10",
+	"content_class":"white",
+	"goods_add":"./goods_add.html",
+	"goods_list":"./goods_list.html"
+}

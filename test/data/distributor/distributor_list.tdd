@@ -1,0 +1,112 @@
+{
+	"is_weixin":false,
+
+	"title":"我的分销商",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"我的分销商" 
+	},
+	"search_path":"/server/searchDis",
+	"search_item":[
+		{"value":"price", "text":"价格"},
+		{"value":"key=sale", "text":"销量"}
+	],
+	"invite_link":"./invite.html",
+
+	"distributor_list":[
+		{	
+			"name":"江苏代理",
+			"phone":"1214324",
+			"level":"B",
+			"payWay":"1",
+			"buyNum":"10w",
+			"rate":"7",
+			"disId":"213"
+		},
+		{	
+			"name":"南京代理",
+			"phone":"1212314",
+			"level":"A",
+			"payWay":"0",
+			"buyNum":"110w",
+			"rate":"17",
+			"disId":"21312"
+		},
+		{	
+			"name":"北京代理",
+			"phone":"1209704",
+			"level":"",
+			"payWay":"",
+			"buyNum":"10w",
+			"rate":"7",
+			"disId":"213213"
+		},
+		{	
+			"name":"江苏代理",
+			"phone":"19709824",
+			"level":"B",
+			"payWay":"1",
+			"buyNum":"10w",
+			"rate":"7",
+			"disId":"21312"
+		},
+		{	
+			"name":"江苏代理",
+			"phone":"1214324",
+			"level":"B",
+			"payWay":"1",
+			"buyNum":"10w",
+			"rate":"7",
+			"disId":"21213"
+		},
+		{	
+			"name":"江苏代理",
+			"phone":"1214324",
+			"level":"B",
+			"payWay":"1",
+			"buyNum":"10w",
+			"rate":"7",
+			"disId":"21123"
+		},
+		{	
+			"name":"江苏代理",
+			"phone":"1214324",
+			"level":"B",
+			"payWay":"1",
+			"buyNum":"10w",
+			"rate":"7",
+			"disId":"21893"
+		}
+	],
+
+	"load_path":"/server/loadDisList",
+
+	"hasLevel":true,
+
+	"setPath":"./set.html",
+
+	"edit_path":"/server/editDis",
+
+	"levelList":["A","B","C"],
+
+	"payWay":[
+		{
+			"text":"即时付款",
+			"value":"1"
+		},
+		{
+			"text":"非即时付款",
+			"value":"2"
+		}
+	]
+
+
+
+
+
+}

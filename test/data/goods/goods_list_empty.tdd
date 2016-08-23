@@ -1,0 +1,17 @@
+{
+
+	"is_weixin":false,
+
+	"title":"我的商品",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"贝婴美" 
+
+	},
+	"addLink":"./goods_add.html"
+}

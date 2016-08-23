@@ -1,0 +1,82 @@
+{
+
+	"is_weixin":false,
+
+	"title":"我的商品",
+
+	"static_path":"./static",
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"贝婴美" 
+
+	},
+	"search_path":"./search.html",
+	"search_item":[
+		{"value":"price", "text":"价格"},
+		{"value":"saleNum", "text":"销量"}
+	],
+	"default_img":"./static/style/default/img/3.png",
+	"add_path":"./goods_add.html",
+	"goods_list_data":[
+
+		{
+			"link":"./goods_detail.html",
+			
+			"goodsName":"贝婴美婴幼儿奶粉",
+			"startPrice":100,
+			"endPrice":300,
+			"spec":3,
+			"status":1
+		},
+		{
+			"link":"1.html",
+			"imgPath":"1.png",
+			"goodsName":"贝婴美健儿奶粉",
+			"startPrice":300,
+			"endPrice":700,
+			"spec":2,
+			"status":0
+		},
+		{
+			"link":"1.html",
+			"imgPath":"1.png",
+			"goodsName":"贝婴美成长奶粉",
+			"startPrice":300,
+			"endPrice":500,
+			"spec":4,
+			"status":1
+		},
+		{
+			"link":"1.html",
+			"imgPath":"1.png",
+			"goodsName":"贝婴美纸尿裤",
+			"startPrice":40,
+			"endPrice":80,
+			"spec":3,
+			"status":1
+		},
+		{
+			"link":"1.html",
+			"imgPath":"1.png",
+			"goodsName":"贝婴美奶粉",
+			"startPrice":100,
+			"endPrice":300,
+			"spec":3,
+			"status":1
+		},
+		{
+			"link":"1.html",
+			"imgPath":"1.png",
+			"goodsName":"贝婴美奶粉",
+			"startPrice":100,
+			"endPrice":300,
+			"spec":3,
+			"status":1
+		}
+	],
+
+	"load_path":"/server/loadGoodsList"
+}

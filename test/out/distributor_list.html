@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+	<html lang="ZH">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我的分销商</title>
+		<link rel="stylesheet" type="text/css" href="./static/lib/mui/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/style/default/css/base.css">
+	</head>
+
+	<body>
+	<header class="mui-bar mui-bar-nav scm-nav-black">
+		<a href="./index.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left newLink"><span>返回</span></a>
+		<h1 class="mui-title">我的分销商</h1>
+	</header>
+	
+	<nav class="mui-bar mui-bar-tab scm-bar-green">
+		<a class="mui-tab-item mui-active newLink" href="./invite.html">
+			<span class="mui-tab-label">+ 邀请分销商</span>
+		</a>
+	</nav>
+	<div class="mui-content mui-scroll-wrapper " id="main">
+		<div class="mui-scroll">
+
+		<div class="scm-search">
+			<button class="label-l mui-icon mui-icon-search" id="search-btn"></button>
+			<a href="#search_box" class="label-r">筛选<i class="mui-icon mui-icon-arrowdown"></i></a>
+		    <input type="search" class="" placeholder="搜索" name="keyWord" id="search">  
+		</div> 
+		<div class="scm-list">
+			<ul class="" id="dis-list">
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">江苏代理</span>
+							<span class="pull-r disLevel">
+								B级
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">1214324</span>
+							<span class="pull-r payWay">
+								非即时付款
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>10w</em></p>
+								<p class="gray"><em>7</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=213>编辑</a>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">南京代理</span>
+							<span class="pull-r disLevel">
+								A级
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">1212314</span>
+							<span class="pull-r payWay">
+								即时付款
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>110w</em></p>
+								<p class="gray"><em>17</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=21312>编辑</a>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">北京代理</span>
+							<span class="pull-r disLevel">
+								
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">1209704</span>
+							<span class="pull-r payWay">
+								
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>10w</em></p>
+								<p class="gray"><em>7</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=213213>编辑</a>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">江苏代理</span>
+							<span class="pull-r disLevel">
+								B级
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">19709824</span>
+							<span class="pull-r payWay">
+								非即时付款
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>10w</em></p>
+								<p class="gray"><em>7</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=21312>编辑</a>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">江苏代理</span>
+							<span class="pull-r disLevel">
+								B级
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">1214324</span>
+							<span class="pull-r payWay">
+								非即时付款
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>10w</em></p>
+								<p class="gray"><em>7</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=21213>编辑</a>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">江苏代理</span>
+							<span class="pull-r disLevel">
+								B级
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">1214324</span>
+							<span class="pull-r payWay">
+								非即时付款
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>10w</em></p>
+								<p class="gray"><em>7</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=21123>编辑</a>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<h2 class="title clear">
+							<span class="pull-l disname">江苏代理</span>
+							<span class="pull-r disLevel">
+								B级
+							</span>
+						</h2>
+						<p class="text-r clear">
+							<span class="pull-l phone">1214324</span>
+							<span class="pull-r payWay">
+								非即时付款
+							</span>
+						</p>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<p class="gray">近30天采购:<em>10w</em></p>
+								<p class="gray"><em>7</em>%上升</p>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId=21893>编辑</a>
+							</div>
+						</div>
+					</li>
+			</ul>
+		</div>
+
+		</div>
+	</div>
+	<div id="search_box" class="mui-popover scm-popover">
+		<ul class="mui-table-view">
+		   		<li class="mui-table-view-cell"><a href="javascript:void(0)" class="search-item" data-value="price">价格</a></li>
+		   		<li class="mui-table-view-cell"><a href="javascript:void(0)" class="search-item" data-value="key=sale">销量</a></li>
+		</ul>
+	</div>
+	<div id="editLevel" class="mui-popover mui-popover-action mui-popover-bottom">
+		<div class="scm-list" >
+			<ul>
+				<li class="list-item">
+					<h3 class="title">分销商名称</h3>
+					<span class="name" id="disName"></span>
+				</li>
+				<li class="list-item">
+					<h3 class="title">手机号码</h3>
+					<span class="name" id="disPhone"></span>
+				</li>
+					<li class="list-item">
+						<h3 class="title">选择销售等级</h3>
+						<ul class="mui-table-view-radio level">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">A级
+									<input type="radio" name="level" value="A"/>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">B级
+									<input type="radio" name="level" value="B"/>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">C级
+									<input type="radio" name="level" value="C"/>
+								</a>
+							</li>
+						</ul>
+					</li>
+				<li class="list-item">
+					<h3 class="title">选择付款方式</h3>
+					<ul class="mui-table-view-radio pay">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">即时付款
+								<input type="radio" name="payWay" value="1"/>
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">非即时付款
+								<input type="radio" name="payWay" value="2"/>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<input type="hidden" name="disId" value="" id="disId"/>
+				<li class="list-item end">
+					<button type="button" class="scm-btn-lg green close-popover" id="submitEdit">确定</button>
+				</li>
+			</ul>
+			
+		</div>
+	</div>	
+	<script type="text/javascript" src="./static/lib/mui/js/mui.min.js"></script>
+	<script type="text/javascript" src="./static/js/base.js"></script>
+	
+	</body>
+
+	</html>
+<script src="./static/lib/handlebars/handlebars.runtime.js"></script>
+<script src="./static/lib/jquery/jquery.min.js"></script>
+<script src="./static/scm/distributor-management/distributor-list/distributor-list.js"></script>
+<script>
+		(function(){
+			var current = 2;
+			var template = Handlebars.templates['distributor-list.hbs'];
+			var keyWord = 'all';
+			var isadd = true;
+			var currentDis;
+
+			mui.init({
+			  pullRefresh : {
+			    container:'.mui-content',
+			    up : {
+			      height:20,
+			      contentrefresh : "正在加载...",
+			      contentnomore:'没有更多数据了',
+			      callback :function(){loadMore.call(this, this, isadd)}
+			    }
+			  }
+			});
+
+			function loadMore(o){
+	   			jQuery.ajax({
+	   				url:'/server/loadDisList',
+	   				type:'post',
+	   				data:{page:current,keyWord:keyWord},
+	   				success:function(data){
+	   					var html = template(data);
+	   					
+	   					jQuery("#dis-list").append(html);
+	   								   			
+			   			if(data.length !== 0){
+			   				o.endPullupToRefresh(false);
+			   				current++;
+			   			}else {
+			   				o.endPullupToRefresh(true);
+			   			}
+			  			
+	   				}
+	   			})
+	   			
+
+			};
+
+			function search(){
+
+				jQuery.ajax({
+	   				url:'/server/loadDisList',
+	   				type:'post',
+	   				data:{"keyWord":keyWord,"page":current},
+	   				success:function(data){
+	   					var html = template(data);
+			   			jQuery("#dis-list").html(html);
+			   			current++;
+			   			mui('#search_box').popover('hide');
+	   				}
+	   			})
+
+			}
+
+			jQuery('.search-item').click(function(){
+				current = 1;
+				keyWord = this.getAttribute('data-value');
+				search();
+			});
+
+			jQuery('#search-btn').click(function(){
+				current = 1;
+				keyWord = jQuery('#search').val();
+				search();
+			});
+
+			jQuery('body').on('tap','.trigger-edit', function(){
+				currentDis = jQuery(this).parent().parent().parent();
+
+				var name = currentDis.find(".disname").text();
+				var phone = currentDis.find(".phone").text();
+				var disId = jQuery(this).attr('disId');
+				jQuery('#disName').html(name);
+				jQuery('#disPhone').html(phone);
+				jQuery('#disId').val(disId);
+			});
+
+			function disEdit(){
+				var level = jQuery("input[name=level]:checked").val();
+				var payWay = jQuery("input[name=payWay]:checked").val();
+				var disId = jQuery('#disId').val();
+				if (level !== undefined || payWay !== undefined){
+					jQuery.ajax({
+						url:'/server/editDis',
+						type:'post',
+						data:{
+							'level':level,
+							'payWay':payWay,
+							'disId':disId
+						},
+						success:function(data){
+							if(data.status == '1'){
+								currentDis.find('.disLevel').html(data.level+"级");
+								currentDis.find('.payWay').html(data.payWay);
+								mui('#editLevel').popover('toggle');
+							}
+							jQuery('#editLevel input[type=radio]').attr('checked', false);
+							jQuery('.mui-table-view-radio li').removeClass('mui-selected');
+						}
+					})
+				}else {
+					mui('#editLevel').popover('toggle');
+				}
+			}
+
+			jQuery('#submitEdit').click(function(){
+				disEdit();
+			})
+
+		})();
+	</script>

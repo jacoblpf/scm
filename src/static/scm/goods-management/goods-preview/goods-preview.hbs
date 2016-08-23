@@ -1,0 +1,24 @@
+{{#each list}}
+<li>
+	<ul class="prev-list">
+		<li class="clear">
+			<span class="prev-l pull-l">
+				<i class="icon icon-brand"></i>名称
+			</span>
+			<input class="prev-r pull-r" name="goodsName[]" value="{{this.[0]}}"/>
+		</li>
+		<li class="clear">
+			<span class="prev-l pull-l">
+				<i class="icon icon-sku"></i>编码
+			</span>
+			<input class="prev-r pull-r" name="sku[]" value="{{this.[1]}}"/>
+		</li>
+		<li class="clear">
+			<span class="prev-l pull-l">
+				<i class="icon icon-attr"></i>属性
+			</span>
+			<input class="prev-r pull-r" name="attr[]" value="{{this.[2]}}">
+		</li>
+	</ul>
+</li>
+{{/each}}

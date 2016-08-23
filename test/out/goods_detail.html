@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+	<html lang="ZH">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>贝婴美健儿奶粉</title>
+		<link rel="stylesheet" type="text/css" href="./static/lib/mui/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/style/default/css/base.css">
+	</head>
+
+	<body>
+	<header class="mui-bar mui-bar-nav scm-nav-black">
+		<a href="./index.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left newLink"><span>返回</span></a>
+		<h1 class="mui-title">贝婴美健儿奶粉</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab scm-gd-nav">
+		<a class="mui-tab-item mui-active newLink" href="./goods_edit.html">
+			<span class="mui-icon mui-icon-compose"></span>
+			<span class="mui-tab-label">编辑</span>
+		</a>
+		<a class="mui-tab-item" id="delete">
+			<span class="mui-icon mui-icon-trash"></span>
+			<span class="mui-tab-label">删除</span>
+		</a>
+		<a class="mui-tab-item end" id="remove">
+			<span class="mui-tab-label">下架</span>
+		</a>
+		
+	</nav>
+	<div class="mui-content mui-scroll-wrapper " id="main">
+		<div class="mui-scroll">
+		<div class="mui-slider">
+			
+			  <div class="mui-slider-group">
+				    	<div class="mui-slider-item"><a href="#"><img src="./static/style/default/img/1.png" /></a></div>
+				    	<div class="mui-slider-item"><a href="#"><img src="./static/style/default/img/1.png" /></a></div>
+			  </div>
+			
+		</div>
+		<div class="goods goods-dsc">
+			<h2 class="title">贝婴美健儿奶粉</h2>
+			<p class="price">￥100 - ￥300</p>
+			<p class="status"><span>SKD243</span><span>已上架</span></p>
+		</div>
+		<div class="goods-info">
+			<ul class="mui-table-view"> 
+		        <li class="mui-table-view-cell mui-collapse mui-active">
+		            <a class="mui-navigate-right" href="#"><i class="icon icon-attr"></i>商品规格</a>
+		            <div class="mui-collapse-content">
+		                <ul class="mui-table-view">
+								<li class="mui-table-view-cell">
+									<span>SDNJ2443</span>
+									<span>100ml</span>
+									<div class="pull-r">
+										<span class="gray">库存100</span>
+										<span class="red">￥100</span>
+									</div>
+								</li>
+								<li class="mui-table-view-cell">
+									<span>SDNJ2443</span>
+									<span>100ml</span>
+									<div class="pull-r">
+										<span class="gray">库存100</span>
+										<span class="red">￥100</span>
+									</div>
+								</li>
+								<li class="mui-table-view-cell">
+									<span>SDNJ2443</span>
+									<span>100ml</span>
+									<div class="pull-r">
+										<span class="gray">库存100</span>
+										<span class="red">￥100</span>
+									</div>
+								</li>
+						</ul>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+		<div class="goods-info">
+			<ul class="mui-table-view"> 
+		        <li class="mui-table-view-cell mui-collapse mui-active">
+		            <a class="mui-navigate-right" href="#"><i class="icon icon-desc"></i>商品描述</a>
+		            <div class="mui-collapse-content">
+		                <p class="text">
+		                	贝因美婴童食品股份有限公司(以下简称“贝因美”)初创于1992年，总部坐落于杭州钱塘江畔。贝因美专注婴童事业，业务涉及婴幼儿食品的生产、研发、销售等多个相关经营领域。2011年4月12日贝因美婴童食品股份有限公司(002570)在深交所挂牌上市，是中国婴童产业的领跑者和最具规模企业之一。
+		                </p>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./static/lib/mui/js/mui.min.js"></script>
+	<script type="text/javascript" src="./static/js/base.js"></script>
+	
+	</body>
+
+	</html>
+<script src="./static/lib/jquery/jquery.min.js"></script>
+<script>
+
+	mui('#main').scroll();
+	mui('body').on('tap', '#delete', function(){
+		mui.confirm('确认删除该商品？','','',function(e){
+			if(e.index !== 0){
+				jQuery.ajax({
+					url:'/server/delete',
+					type:'post',	
+					data:{'goods_id':'13232'},              
+					success:function(data){
+						if(data.status == "1"){
+							mui.toast('商品已删除！');
+							mui.later(function(){
+								mui.openWindow({url: './goods_list.html'});
+							},1000);
+						}else{
+							mui.toast('删除失败，请重试！');
+						}
+					},
+					error:function(data){
+						mui.toast('data');
+					}
+				});
+				
+			}
+		}, 'div')
+	});
+	mui('body').on('tap', '#remove', function(){
+		mui.confirm('确认撤下该商品？','','',function(e){
+			if(e.index !== 0){
+				jQuery.ajax({
+					url:'/server/remove',
+					type:'post',	   
+					data:{'goods_id':'13232'},           
+					success:function(data){
+						if(data.status == "1"){
+							mui.toast('商品已下架！');
+							mui.later(function(){
+								mui.openWindow({url: './goods_list.html'});
+							},1000);
+						}else{
+							mui.toast('下架失败，请重试！');
+						}
+					},
+					error:function(data){
+						mui.toast('data');
+					}
+				});
+			}
+		}, 'div')
+	});
+</script>

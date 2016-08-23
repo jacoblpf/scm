@@ -1,0 +1,9 @@
+{
+	"is_weixin":false,
+
+	"title":"邀请分销商",
+
+	"static_path":"./static",
+
+	"content_class":"dis"
+}

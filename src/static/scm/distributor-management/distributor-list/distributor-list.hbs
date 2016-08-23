@@ -1,0 +1,18 @@
+{{#each list}}
+<li class="list-item">
+	<h2 class="title clear"><span class="pull-l disname">{{name}}</span><span class="pull-r disLevel">{{#if level}}{{level}}级{{/if}}</span></h2>
+	<p class="text-r clear">
+		<span class="pull-l phone">{{phone}}</span>
+		<span class="pull-r payWay">{{payWay}}</span>
+	</p>
+	<div class="mui-row">
+		<div class="mui-col-xs-6">
+			<p class="gray">近30天采购:<em>{{buyNum}}</em></p>
+			<p class="gray"><em>{{rate}}</em>%上升</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<a href="#editLevel" type="button" class="mui-btn pull-r btn trigger-edit" disId="{{disId}}">编辑</a>
+		</div>
+	</div>
+</li>
+{{/each}}

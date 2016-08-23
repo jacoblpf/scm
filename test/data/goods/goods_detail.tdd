@@ -1,0 +1,70 @@
+{
+	
+	"is_weixin":false,
+
+	"title":"贝婴美健儿奶粉",
+
+	"static_path":"./static",
+
+	"name":"贝婴美健儿奶粉",
+
+	"startPrice":"100",
+
+	"endPrice":"300",
+
+	"sku":"SKD243",
+
+	"status":"1",
+
+	"goods_id":"32452",
+
+	"default_img":"./static/img/3.png",
+
+	"imgs":["./static/style/default/img/1.png","./static/style/default/img/1.png"],
+
+	"page_head_info":{ 
+
+		"backUrl":"./index.html", 
+
+		"title":"贝婴美健儿奶粉" 
+
+	},
+
+	"goods_spec":[
+		{
+			"sku":"SDNJ2443",
+			"prop":"100ml",
+			"stock":"100",
+			"price":"100"
+		},
+		{
+			"sku":"SDNJ2443",
+			"prop":"100ml",
+			"stock":"100",
+			"price":"100"
+		},
+		{
+			"sku":"SDNJ2443",
+			"prop":"100ml",
+			"stock":"100",
+			"price":"100"
+		}
+	],
+
+	"goods_desc":"贝因美婴童食品股份有限公司(以下简称“贝因美”)初创于1992年，总部坐落于杭州钱塘江畔。贝因美专注婴童事业，业务涉及婴幼儿食品的生产、研发、销售等多个相关经营领域。2011年4月12日贝因美婴童食品股份有限公司(002570)在深交所挂牌上市，是中国婴童产业的领跑者和最具规模企业之一。",
+
+	"edit_path":"./goods_edit.html",
+
+	"delete_path":"/server/delete",
+
+	"goods_id":"13232",
+
+	"success_path":"./goods_list.html",
+
+	"remove_path":"/server/remove"
+
+
+	
+
+
+}
